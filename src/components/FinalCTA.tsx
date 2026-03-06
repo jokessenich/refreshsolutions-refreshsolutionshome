@@ -25,20 +25,38 @@ export default function FinalCTA() {
             We&apos;ll create a free homepage preview — no commitment, no credit
             card, no sales pitch.
           </p>
-          <div className="reveal reveal-delay-1 flex flex-col sm:flex-row gap-4 justify-center mt-10">
-            <a
-              href="mailto:hello@refreshsolutions.com?subject=Free%20Homepage%20Preview&body=Here's%20my%20current%20website%3A%20"
-              className="inline-flex items-center justify-center text-[15px] font-medium px-9 py-4 bg-accent text-charcoal rounded-md hover:bg-accent-hover transition-all duration-300"
+
+          <form
+            action="https://formspree.io/f/mjgeqddy"
+            method="POST"
+            className="reveal reveal-delay-1 max-w-[480px] mx-auto mt-10 flex flex-col gap-4 text-left"
+          >
+            <label className="flex flex-col gap-2 text-[15px] font-medium text-soft-gray">
+              Your email:
+              <input
+                type="email"
+                name="email"
+                required
+                className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-md text-white text-[15px] placeholder:text-white/30 focus:outline-none focus:border-accent transition-colors duration-300"
+                placeholder="you@example.com"
+              />
+            </label>
+            <label className="flex flex-col gap-2 text-[15px] font-medium text-soft-gray">
+              Your message:
+              <textarea
+                name="message"
+                rows={4}
+                className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-md text-white text-[15px] placeholder:text-white/30 focus:outline-none focus:border-accent transition-colors duration-300 resize-vertical"
+                placeholder="Here's my current website: "
+              />
+            </label>
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center text-[15px] font-medium px-9 py-4 bg-accent text-charcoal rounded-md hover:bg-accent-hover transition-all duration-300 mt-2"
             >
               Get Your Free Preview
-            </a>
-            <a
-              href="mailto:hello@refreshsolutions.com"
-              className="inline-flex items-center justify-center text-[15px] font-medium px-9 py-4 border-[1.5px] border-white/20 text-white rounded-md hover:border-white/50 transition-all duration-300"
-            >
-              Ask a Question
-            </a>
-          </div>
+            </button>
+          </form>
         </div>
       </div>
     </section>
