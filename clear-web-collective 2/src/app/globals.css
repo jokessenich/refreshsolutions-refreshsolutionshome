@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   BASE
+   ======================================== */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   SCROLL REVEAL
+   ======================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ========================================
+   FAQ
+   ======================================== */
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
+  position: absolute;
+  background: #1a1a1a;
+  transition: transform 0.3s ease;
+}
+
+.faq-icon::before {
+  width: 14px;
+  height: 1.5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.faq-icon::after {
+  width: 1.5px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.faq-item.open .faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
