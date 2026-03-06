@@ -1,3 +1,8 @@
+Working
+
+Updated FinalCTA with correct Formspree form fields: name, website, email
+typescript
+
 "use client";
 
 import { useReveal } from "./useReveal";
@@ -32,6 +37,26 @@ export default function FinalCTA() {
             className="reveal reveal-delay-1 max-w-[480px] mx-auto mt-10 flex flex-col gap-4 text-left"
           >
             <label className="flex flex-col gap-2 text-[15px] font-medium text-soft-gray">
+              Your name:
+              <input
+                type="text"
+                name="name"
+                required
+                className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-md text-white text-[15px] placeholder:text-white/30 focus:outline-none focus:border-accent transition-colors duration-300"
+                placeholder="Jane Smith"
+              />
+            </label>
+            <label className="flex flex-col gap-2 text-[15px] font-medium text-soft-gray">
+              Your website:
+              <input
+                type="url"
+                name="website"
+                required
+                className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-md text-white text-[15px] placeholder:text-white/30 focus:outline-none focus:border-accent transition-colors duration-300"
+                placeholder="https://yourwebsite.com"
+              />
+            </label>
+            <label className="flex flex-col gap-2 text-[15px] font-medium text-soft-gray">
               Your email:
               <input
                 type="email"
@@ -39,15 +64,6 @@ export default function FinalCTA() {
                 required
                 className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-md text-white text-[15px] placeholder:text-white/30 focus:outline-none focus:border-accent transition-colors duration-300"
                 placeholder="you@example.com"
-              />
-            </label>
-            <label className="flex flex-col gap-2 text-[15px] font-medium text-soft-gray">
-              Your message:
-              <textarea
-                name="message"
-                rows={4}
-                className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-md text-white text-[15px] placeholder:text-white/30 focus:outline-none focus:border-accent transition-colors duration-300 resize-vertical"
-                placeholder="Here's my current website: "
               />
             </label>
             <button
