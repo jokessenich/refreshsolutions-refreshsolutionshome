@@ -6,7 +6,7 @@ const tiers = [
   {
     tier: "Essential",
     name: "Clean Start",
-    price: "Starting at $3,000",
+    price: "Starting at $999",
     desc: "For businesses that need a clean, modern website without a lot of complexity. Ideal if you have a simple site that just needs to look and work better.",
     features: [
       "Up to 5 pages",
@@ -21,7 +21,7 @@ const tiers = [
   {
     tier: "Recommended",
     name: "Full Rebuild",
-    price: "Starting at $5,000",
+    price: "Starting at $1,999",
     desc: "For businesses that want more — more pages, more polish, and a site that's built to convert visitors into customers.",
     features: [
       "Up to 10 pages",
@@ -37,7 +37,7 @@ const tiers = [
   {
     tier: "Premium",
     name: "Complete Overhaul",
-    price: "Starting at $8,000",
+    price: "Starting at $4,999",
     desc: "For established businesses that need a comprehensive web presence — multiple service pages, booking systems, and ongoing strategy.",
     features: [
       "15+ pages",
